@@ -1,5 +1,5 @@
-enum BugState {
-    DEAD,
+const BugState = {
+    DEAD: 'Dead',
 }
 
 export default class Bug {
