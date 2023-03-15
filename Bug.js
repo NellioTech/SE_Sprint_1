@@ -1,4 +1,8 @@
-class Bug {
+enum BugState {
+    DEAD,
+}
+
+export default class Bug {
     #id;
     #color;
     #state;
@@ -9,8 +13,8 @@ class Bug {
     #pos;
 
     kill() {
-        console.assert(this.state !== DEAD);
-        this.state = DEAD;
+        console.assert(this.state !== BugState.DEAD);
+        this.state = BugState.DEAD;
     }
 
     getPosition() {
@@ -19,7 +23,7 @@ class Bug {
 
     toString() {
         return `Bug ${this.#id} of color ${this.#color} at position ${this.#pos}.\n
-        State: ${this.state}, \n
+        State: ${this.#state}, \n
         Resting: ${this.#resting}, \n
         Direction: ${this.#direction}, \n
         HasFood: ${this.#hasFood}, \n
