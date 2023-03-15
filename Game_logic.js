@@ -1,6 +1,6 @@
 class position{
-  #x; // position x
-  #y; // position y
+  #x= 0; // position x
+  #y = 0; // position y
 }
 class WorldCell {
   #obstructed = false;
